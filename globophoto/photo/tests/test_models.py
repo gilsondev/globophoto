@@ -21,6 +21,7 @@ class PhotoTest(TestCase):
         self.assertIn("name", self.fields)
 
     def test_create(self):
+        """Should create the photo object"""
         file_name = 'image_test.jpg'
         image_path = os.path.dirname(__file__)
         image_file = open(os.path.join(image_path, file_name), 'r')

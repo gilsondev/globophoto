@@ -6,6 +6,7 @@ from django.dispatch import receiver
 from globophoto.photo.models import Photo
 
 
+# TODO: Need test
 @receiver(pre_save, sender=Photo)
 def generate_name(sender, instance, **kwargs):
     """
