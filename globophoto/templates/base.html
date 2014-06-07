@@ -1,5 +1,6 @@
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ LANGUAGE_CODE }}">
   <head>
     {% block meta %}
         <meta charset="utf-8">
@@ -43,10 +44,10 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Galeria</a></li>
+              <li class="active"><a href="#">{% trans "Galeria" %}</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Gerenciar as Fotos</a></li>
+              <li><a href="#">{% trans "Gerenciar as Fotos" %}</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
