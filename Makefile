@@ -22,4 +22,4 @@ test: clean pep8
 	python manage.py test $(APP)
 
 pep8: clean
-	@pep8 $(PROJECT_NAME)
+	@pep8 --show-source --show-pep8 $(PROJECT_NAME)
