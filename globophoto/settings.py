@@ -5,6 +5,8 @@ import os
 
 import dj_database_url
 
+from django.conf.global_settings import TEMPLATE_CONTEXT_PROCESSORS
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_DIR = os.path.join(BASE_DIR, os.path.dirname(__file__))
 
@@ -73,6 +75,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+TEMPLATE_CONTEXT_PROCESSORS += (
+    'django.core.context_processors.request',
+)
 
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, 'templates'),

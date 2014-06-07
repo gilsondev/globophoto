@@ -1,4 +1,4 @@
-{% load i18n staticfiles %}
+{% load i18n staticfiles active_page %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
@@ -44,7 +44,7 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-              <li class="active"><a href="#">{% trans "Galeria" %}</a></li>
+              <li class="{% active_page request 'photo:home' %}"><a href="#">{% trans "Galeria" %}</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li><a href="#">{% trans "Gerenciar as Fotos" %}</a></li>
