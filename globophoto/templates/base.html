@@ -1,4 +1,4 @@
-{% load i18n %}
+{% load i18n staticfiles %}
 <!DOCTYPE html>
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
@@ -15,7 +15,7 @@
     {% endblock title %}
 
     {% block styles %}
-        <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
+        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}">
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     {% endblock styles %}
