@@ -1,4 +1,6 @@
-.PHONY: clean configdb syncdb migrate run test
+PROJECT_NAME := globophoto
+
+.PHONY: clean configdb syncdb migrate run test pep8
 
 clean:
 	find . -name "*.pyc" -delete
@@ -13,8 +15,11 @@ syncdb:
 migrate:
 	@python manage.py migrate
 
-run: configdb syncdb migrate
+run: configdb clean syncdb migrate
 	@python manage.py runserver
 
-test:
+test: clean pep8
 	python manage.py test $(APP)
+
+pep8: clean
+	@pep8 $(PROJECT_NAME)
