@@ -14,7 +14,7 @@ def load_image(path=None):
     """
     if not path:
         base_dir = os.path.dirname(__file__)
-        path = os.path.join(base_dir, '..', 'image_test.jpg')
+        path = os.path.join(base_dir, 'image_test.jpg')
 
         image = ImageFile(open(path, 'r'))
     return image
