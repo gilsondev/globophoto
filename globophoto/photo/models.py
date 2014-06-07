@@ -18,6 +18,9 @@ class Photo(models.Model):
     class Meta:
         db_table = 'photos'
 
+    def __unicode__(self):
+        return self.name
+
     @property
     def filename(self):
         """Parse file path to return filename"""
