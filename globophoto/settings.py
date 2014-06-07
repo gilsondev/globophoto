@@ -83,3 +83,27 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'public')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# South
+SOUTH_TESTS_MIGRATE = False
+
+# Tests
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+NOSE_ARGS = [
+    '--match=^(must|ensure|should|test|it_should)',
+    '--where=%s' % BASE_DIR,
+    '--all-modules',
+    '--with-id',
+    '--verbosity=2',
+    '--nologcapture',
+]
