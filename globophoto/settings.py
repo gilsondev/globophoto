@@ -6,6 +6,7 @@ import os
 import dj_database_url
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+PROJECT_NAME = os.path.join(BASE_DIR, os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -53,7 +54,6 @@ ROOT_URLCONF = 'globophoto.urls'
 
 WSGI_APPLICATION = 'globophoto.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 DATABASES = {
@@ -73,6 +73,10 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+TEMPLATE_DIRS = (
+    os.path.join(PROJECT_DIR, 'templates'),
+)
 
 
 # Static files (CSS, JavaScript, Images)
