@@ -102,4 +102,5 @@ NOSE_ARGS = [
     '--with-id',
     '--verbosity=2',
     '--nologcapture',
+    '-s',
 ]

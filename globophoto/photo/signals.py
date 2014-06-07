@@ -11,4 +11,4 @@ def generate_name(sender, instance, **kwargs):
     """
     Capture the filename and set to name field
     """
-    instance.name = instance.image.name.split('/')[-1]
+    instance.name = instance.filename
