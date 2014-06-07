@@ -29,6 +29,6 @@ class PhotoTest(TestCase):
             'image': ImageFile(image_file)
         }
         photo = Photo.objects.create(**data)
-        self.assertEqual(photo.pk, 1)
+        self.assertTrue(photo.pk)
         self.assertEqual(photo.name, file_name)
 
