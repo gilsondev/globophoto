@@ -5,7 +5,6 @@ admin.autodiscover()
 
 urlpatterns = patterns(
     '',
-    # url(r'^$', 'globophoto.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+    url(r'^', include('globophoto.photo.urls', namespace='photo')),
     url(r'^admin/', include(admin.site.urls)),
 )

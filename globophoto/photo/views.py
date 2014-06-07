@@ -1,3 +1,7 @@
-from django.shortcuts import render
+# -*- coding: utf-8 -*-
 
-# Create your views here.
+from django.views.generic.base import TemplateView
+
+
+class GalleryView(TemplateView):
+    template_name = "photo/gallery.html"
