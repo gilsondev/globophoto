@@ -18,4 +18,3 @@ def load_image(path=None):
 
         image = ImageFile(open(path, 'r'))
     return image
-

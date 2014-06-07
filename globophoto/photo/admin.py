@@ -8,6 +8,7 @@ from globophoto.photo.forms import PhotoForm
 
 class PhotoAdmin(admin.ModelAdmin):
     form = PhotoForm
+
     class Meta:
         model = Photo
 
