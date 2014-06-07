@@ -1,3 +1,12 @@
+# -*- coding: utf-8 -*-
+
 from django.contrib import admin
 
-# Register your models here.
+from globophoto.photo.models import Photo
+
+
+class PhotoAdmin(admin.ModelAdmin):
+    class Meta:
+        model = Photo
+
+admin.site.register(Photo, PhotoAdmin)
