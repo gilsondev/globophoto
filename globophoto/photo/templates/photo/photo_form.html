@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block main %}
+    <div class="col-md-12">
+        <h1>{% trans "Nova Foto" %}</h1>
+        <hr>
+        <form class="form well" enctype="multipart/form-data" action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <input class="btn btn-lg btn-success" type="submit" value="Salvar">
+        </form>
+    </div>
+{% endblock main %}

@@ -2,8 +2,11 @@
 
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView
+from django.views.generic.edit import CreateView
+from django.core.urlresolvers import reverse_lazy
 
 from globophoto.photo.models import Photo
+from globophoto.photo.forms import PhotoForm
 
 
 class GalleryView(TemplateView):
@@ -12,3 +15,9 @@ class GalleryView(TemplateView):
 
 class PhotoListView(ListView):
     model = Photo
+
+
+class PhotoCreateView(CreateView):
+    model = Photo
+    form_class = PhotoForm
+    success_url = reverse_lazy('photo:list')

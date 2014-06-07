@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
 from django.test import TestCase
+from django.core.urlresolvers import reverse
 
 
 class GalleryView(TestCase):
     def setUp(self):
-        self.resp = self.client.get('/')
+        self.resp = self.client.get(reverse('photo:home'))
 
     def test_get(self):
         """GET / should return status code 200"""
@@ -18,7 +19,7 @@ class GalleryView(TestCase):
 
 class PhotoListView(TestCase):
     def setUp(self):
-        self.resp = self.client.get('/photos/')
+        self.resp = self.client.get(reverse('photo:list'))
 
     def test_get(self):
         """GET /photos/ should return status code 200"""
@@ -27,3 +28,16 @@ class PhotoListView(TestCase):
     def test_template(self):
         """Should render template photo/photo_list.html"""
         self.assertTemplateUsed(self.resp, "photo/photo_list.html")
+
+
+class PhotoCreateView(TestCase):
+    def setUp(self):
+        self.resp = self.client.get(reverse('photo:create'))
+
+    def test_get(self):
+        """GET /photos/new/ should return status code 200"""
+        self.assertEqual(self.resp.status_code, 200)
+
+    def test_template(self):
+        """Should render template photo/photo_form.html"""
+        self.assertTemplateUsed(self.resp, "photo/photo_form.html")
