@@ -12,9 +12,12 @@ class Photo(models.Model):
     :type name: str.
     :param image: The photo uploaded
     :type image: file.
+    :param created_at: When image was created
+    :type created_at: datetime
     """
     name = models.CharField(_(u"Nome da Imagem"), max_length=255)
     image = models.ImageField(_(u"Imagem"), upload_to="images", max_length=255)
+    created_at = models.DateTimeField(auto_now_add=True, auto_now=True)
 
     class Meta:
         db_table = 'photos'
