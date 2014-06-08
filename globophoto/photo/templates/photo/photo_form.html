@@ -11,7 +11,9 @@
         <hr>
         <form class="form well" enctype="multipart/form-data" action="" method="POST">
             {% csrf_token %}
-            <img src="{{ photo.image.url }}" alt="{{ photo.name }}" class="img-thumbnail" width="256" height="256">
+            {% if object.pk %}
+                <img src="{{ photo.image.url }}" alt="{{ photo.name }}" class="img-thumbnail" width="256" height="256">
+            {% endif %}
             {{ form.as_p }}
             <br>
             <input class="btn btn-lg btn-success" type="submit" value="Salvar"> {% trans "ou" %} 
