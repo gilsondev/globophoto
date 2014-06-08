@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 
 class Photo(models.Model):
@@ -12,8 +13,8 @@ class Photo(models.Model):
     :param image: The photo uploaded
     :type image: file.
     """
-    name = models.CharField(max_length=255)
-    image = models.ImageField(upload_to="images", max_length=255)
+    name = models.CharField(_(u"Nome da Imagem"), max_length=255)
+    image = models.ImageField(_(u"Imagem"), upload_to="images", max_length=255)
 
     class Meta:
         db_table = 'photos'
