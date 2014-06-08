@@ -21,6 +21,9 @@ class Photo(models.Model):
 
     class Meta:
         db_table = 'photos'
+        verbose_name = _(u"foto")
+        verbose_name_plural = _(u"fotos")
+        ordering = ['-created_at']
 
     def __unicode__(self):
         return self.name
