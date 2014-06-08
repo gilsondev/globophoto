@@ -47,7 +47,7 @@
               <li class="{% active_page request 'photo:home' %}"><a href="#">{% trans "Galeria" %}</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">{% trans "Gerenciar as Fotos" %}</a></li>
+              <li class="{% active_page request 'photo:list' %}"><a href="{% url 'photo:list' %}">{% trans "Gerenciar as Fotos" %}</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
