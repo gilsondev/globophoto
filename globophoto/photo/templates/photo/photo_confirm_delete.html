@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block main %}
+    <form class="form well" action="" method="POST">
+        {% csrf_token %}
+        <h2>{% trans "Realmente deseja remover a photo" %} "{{ object }}"?</h2>
+        <img src="{{ object.image.url }}" alt="{{ object.image.name }}" class="img-thumbnail" width="512" height="512">
+        <br>
+        <input class="btn btn-lg btn-success" type="submit" value="Sim" /> {% trans "ou" %}
+        <a class="btn btn-lg btn-default" href="{% url 'photo:list' %}">Não</a>
+    </form>
+{% endblock main %}

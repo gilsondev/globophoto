@@ -27,7 +27,7 @@
                     <tr>
                         <td>
                             <a href="{% url 'photo:update' photo.pk %}"><i class="fa fa-pencil"></i> {% trans "Editar" %}</a>
-                            <a href="#"><i class="fa fa-trash-o"></i> {% trans "Excluir" %}</a>
+                            <a href="{% url 'photo:delete' photo.pk %}"><i class="fa fa-trash-o"></i> {% trans "Excluir" %}</a>
                         </td>
                         <td><img src="{{ photo.image.url }}" alt="{{ photo.name }}" class="img-thumbnail" width="100" height="100"></td>
                         <td class="middle-cell">{{ photo.name }}</td>
@@ -38,7 +38,7 @@
         </table>
     </div>
     <div class="col-md-12">
-        <a class="btn btn-lg btn-success" href="#">Adicionar Foto</a> {% trans "ou" %}
+        <a class="btn btn-lg btn-success" href="{% url 'photo:create' %}">Adicionar Foto</a> {% trans "ou" %}
         <a class="btn btn-lg btn-default" href="{% url 'photo:home' %}">Voltar</a>
     </div>
 {% endblock main %}

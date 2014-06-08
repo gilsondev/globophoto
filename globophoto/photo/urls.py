@@ -2,7 +2,7 @@ from django.conf.urls import patterns, url
 
 from globophoto.photo.views import (
     GalleryView, PhotoListView, PhotoCreateView,
-    PhotoUpdateView
+    PhotoUpdateView, PhotoDeleteView
 )
 
 urlpatterns = patterns(
@@ -12,4 +12,6 @@ urlpatterns = patterns(
     url(r'^photos/new/$', PhotoCreateView.as_view(), name='create'),
     url(r'^photos/update/(?P<pk>[\d]+)/$', PhotoUpdateView.as_view(),
         name='update'),
+    url(r'^photos/delete/(?P<pk>[\d]+)/$', PhotoDeleteView.as_view(),
+        name='delete'),
 )
