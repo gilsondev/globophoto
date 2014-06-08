@@ -1,1 +1,12 @@
 {% extends "base.html" %}
+{% load staticfiles %}
+
+{% block main %}
+    <div class="col-md-12">
+        <div id="gallery">
+            {% for photo in object_list %}
+                <img src="{{ photo.image.url }}" alt="{{ photo.image.name }}" width="500" height="300">
+            {% endfor %}
+        </div>
+    </div>
+{% endblock main %}
