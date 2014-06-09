@@ -8,15 +8,22 @@
 
 {% block main %}
     <div class="col-md-12">
-        <div id="gallery">
-            <a href="#" id="left-arrow"><img src="{% static 'img/seta_esquerda.jpg' %}" alt=""></a>
-            <a href="#" id="right-arrow"><img src="{% static 'img/seta_direita.jpg' %}" alt=""></a>
-            <div id="photos">
-                {% for photo in object_list %}
-                    <img src="{{ photo.image.url }}" alt="{{ photo.image.name }}" width="800" height="400">
-                {% endfor %}
+        {% if object_list %}
+            <div id="gallery">
+                <a href="#" id="left-arrow"><img src="{% static 'img/seta_esquerda.jpg' %}" alt=""></a>
+                <a href="#" id="right-arrow"><img src="{% static 'img/seta_direita.jpg' %}" alt=""></a>
+                <div id="photos">
+                    {% for photo in object_list %}
+                        <img src="{{ photo.image.url }}" alt="{{ photo.image.name }}" width="800" height="400">
+                    {% endfor %}
+                </div>
             </div>
-        </div>
+        {% else %}
+            <div class="page-header">
+                <h1>Estamos sem foto agora</h1>
+                <p>Percebi que está vendo essa página sem foto. Isso é porque não cadastrou nenhuma. O que acha de <a href="{% url 'photo:list' %}">fazer isso agora?</a></p>
+            </div>
+        {% endif %}
     </div>
 {% endblock main %}
 
