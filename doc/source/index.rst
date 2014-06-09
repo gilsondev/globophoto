@@ -32,7 +32,8 @@ Documentação:
     architecture
     installation
     photo_manager
-    api
+    changelog
+    roadmap
 
 
 * :ref:`genindex`

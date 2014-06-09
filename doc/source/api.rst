@@ -1,4 +1,0 @@
-API
-====
-
-.. module:: globophoto
