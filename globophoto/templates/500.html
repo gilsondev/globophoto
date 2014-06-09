@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block navbar %} {% endblock  %}
+
+{% block main %}
+    <div class="col-md-12">
+        <div class="page-header">
+            <h1>Caramba! Aconteceu algum erro aqui dentro!</h1>
+        </div>
+        <p>Estou até com vergonha por isso. Mas não se irrite, que já estou avisando isso para que os meus criadores se virem pra resolver isso.</p>
+        <p>Até lá, vamos voltar? <a href="{% url 'photo:home' %}">Eu te acompanho</a>.</p>
+    </div>
+{% endblock main %}

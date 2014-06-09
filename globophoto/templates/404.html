@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block navbar %} {% endblock  %}
+
+{% block main %}
+    <div class="col-md-12">
+        <div class="page-header">
+            <h1>Essa página que procura não existe</h1>
+        </div>
+        <p>Veja se esta buscando a página certa novamente. Caso seja essa mesmo, é porque ela foi retirada de fato.</p>
+        <p>Que pena! Vamos voltar agora? <a href="{% url 'photo:home' %}">Eu te acompanho</a>.</p>
+    </div>
+{% endblock main %}
