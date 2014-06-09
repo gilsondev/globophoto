@@ -1,6 +1,9 @@
 Globo Photo
 =============
 
+.. image:: https://travis-ci.org/gilsondev/globophoto.svg
+    :target: https://travis-ci.org/gilsondev/globophoto
+
 Projeto desenvolvido para a exibição de fotos em formato de galeria, usando
 slider simples.
 
