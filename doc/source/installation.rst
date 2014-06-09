@@ -7,7 +7,7 @@ Para instalar o projeto siga os procedimentos abaixo:
 
 .. sourcecode:: bash
 
-    $ git clone 
+    $ git clone https://github.com/gilsondev/globophoto.git
 
 2. Crie o ambiente virtual executando o seguinte comando:
 
