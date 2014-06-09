@@ -28,10 +28,10 @@ Instalação
     (globophoto)$ make run
 
 
-.. Documentação
-.. =============
+Documentação
+=============
 
-..  Mais informações do projeto, acesse a `documentação`_.
+Mais informações do projeto, acesse a `documentação`_.
 
 
-.. .. _documentação: 
+.. _documentação: http://globo-photo.readthedocs.org/
