@@ -26,6 +26,8 @@ Instalação
 .. sourcecode:: bash
 
     (globophoto)$ make run
+    Set root password to config database...
+    Enter password: *****
 
 
 Documentação
