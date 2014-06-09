@@ -3,6 +3,8 @@ python:
     - "2.7"
 
 install:
+    - export DATABASE_URL='sqlite:///travis.sqlite3'
     - pip install -r requirements.txt
 script:
-    - python manage.py test photo
+    - make syncdb migrate
+    - make test photo
