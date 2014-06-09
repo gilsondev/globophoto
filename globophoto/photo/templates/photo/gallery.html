@@ -1,12 +1,26 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
+{% block styles %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+{% endblock styles %}
+
 {% block main %}
     <div class="col-md-12">
         <div id="gallery">
-            {% for photo in object_list %}
-                <img src="{{ photo.image.url }}" alt="{{ photo.image.name }}" width="500" height="300">
-            {% endfor %}
+            <a href="#" id="left-arrow"><img src="{% static 'img/seta_esquerda.jpg' %}" alt=""></a>
+            <a href="#" id="right-arrow"><img src="{% static 'img/seta_direita.jpg' %}" alt=""></a>
+            <div id="photos">
+                {% for photo in object_list %}
+                    <img src="{{ photo.image.url }}" alt="{{ photo.image.name }}" width="800" height="400">
+                {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock main %}
+
+{% block scripts %}
+    {{ block.super }}
+    <script src="{% static 'js/gallery.js' %}"></script>
+{% endblock scripts %}

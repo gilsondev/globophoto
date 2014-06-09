@@ -1,0 +1,37 @@
+#gallery {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+#gallery a {
+    position: absolute;
+    margin: 13% 0 10% 0;
+    z-index: 1000;
+}
+
+#photos {
+    position: relative;
+}
+
+#gallery #left-arrow {
+    left: 15%;
+}
+
+#gallery #right-arrow {
+    right: 15%;
+}
+
+.main-image {
+    display: block;
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -moz-animation: fadein 2s; /* Firefox */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera */
+    animation: fadein 2s;
+}
+
+.hide {
+    display: none;
+}

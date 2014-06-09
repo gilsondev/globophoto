@@ -1,0 +1,35 @@
+$(document).ready(function() {
+    // Setting images to hide and first to show
+    var images = $("#photos img");
+    images.each(function(index, el) {
+        if (index == 0) {
+            $(this).addClass('main-image');
+        } else {
+            $(this).addClass('hide');
+        }
+    });
+
+    $("#left-arrow").on('click', function(e) {
+        var image = $("#photos").find('.main-image');
+        var previous_image = image.prev()
+
+        if(previous_image.length > 0) {
+            image.toggleClass("main-image hide");
+            previous_image.toggleClass("hide main-image");
+        } else {
+            return false;
+        }
+    });
+
+    $("#right-arrow").on('click', function(e) {
+        var image = $("#photos").find('.main-image');
+        var next_image = image.next()
+
+        if(next_image.length > 0) {
+            image.toggleClass("main-image hide");
+            next_image.toggleClass("hide main-image");
+        } else {
+            return false;
+        }
+    });
+});

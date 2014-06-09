@@ -41,14 +41,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="{% url 'photo:home' %}">
             <img src="{% static 'img/logo.png' %}" alt="" width="24" height="24">
               Globo Photo
           </a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-              <li class="{% active_page request 'photo:home' %}"><a href="#">{% trans "Galeria" %}</a></li>
+              <li class="{% active_page request 'photo:home' %}"><a href="{% url 'photo:home' %}">{% trans "Galeria" %}</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
               <li class="{% active_page request 'photo:list' %}"><a href="{% url 'photo:list' %}">{% trans "Gerenciar as Fotos" %}</a></li>
@@ -63,10 +63,12 @@
     </div> <!-- /container -->
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    {% block scripts %}
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    {% endblock scripts %}
   </body>
 </html>
