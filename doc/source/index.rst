@@ -7,8 +7,8 @@ Bem vindo à documentação do Globo Photo
 ========================================
 
 .. image:: _static/img/screenshot.png
-    :height: 512px
-    :width: 512px
+    :height: 600px
+    :width: 800px
     :align: center
 
 Globo Photo é um projeto desenvolvido para exibir as fotos que
