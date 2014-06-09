@@ -12,14 +12,14 @@ Bem vindo à documentação do Globo Photo
     :align: center
 
 Globo Photo é um projeto desenvolvido para exibir as fotos que
-você for colocar no sistema. É exigido de forma elegando, através de
+você for colocar em uma simples galeria. É exibido de forma elegante, através de
 um slider, que facilita na navegação.
 
 
 **Funcionalidades:**
 
 - Design responsivo;
-- Gerenciamento de fotos, com visualização de cada imagem;
+- Dois tipos de gerenciamento de fotos, e com visualização de cada imagem;
 - Feito com menos plugins possível, melhorando assim a performance;
 - Por ser feito de forma simples, a dificuldade de evoluir é pequena.
 
@@ -34,10 +34,6 @@ Documentação:
     photo_manager
     api
 
-
-
-Índices e tabelas
-==================
 
 * :ref:`genindex`
 * :ref:`modindex`
