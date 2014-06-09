@@ -1,6 +1,6 @@
 PROJECT_NAME := globophoto
 
-.PHONY: clean configdb syncdb migrate run test pep8
+.PHONY: clean configdb syncdb migrate createsuperuser run test pep8
 
 clean:
 	find . -name "*.pyc" -delete
@@ -11,12 +11,15 @@ configdb:
 	@echo 'Created user globophoto and database globophotos.'
 
 syncdb:
-	@python manage.py syncdb
+	@python manage.py syncdb --noinput
 
 migrate:
 	@python manage.py migrate
 
-run: configdb clean syncdb migrate
+createsuperuser:
+	@python manage.py createsuperuser
+
+run: configdb clean syncdb migrate createsuperuser
 	@python manage.py runserver
 
 test: clean pep8
